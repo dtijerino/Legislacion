@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legislación Educativa - Portafolio Minecraft</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes de Google: VT323 (Pixel), Ruslan Display (Minecraft Title), Roboto (Lectura clara) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=VT323&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* FUENTES Y COLORES BASE */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            font-size: 1rem;
+            line-height: 1.6;
+            background-image:
+                linear-gradient(45deg, #3d2e1f 25%, transparent 25%),
+                linear-gradient(-45deg, #3d2e1f 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #3d2e1f 75%),
+                linear-gradient(-45deg, transparent 75%, #3d2e1f 75%);
+            background-size: 40px 40px;
+            background-color: #523e2a;
+        }
+
+        .mc-font {
+            font-family: 'Ruslan Display', cursive;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px #000;
+        }
+
+        .pixel-text {
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+        }
+
+        /* BOTONES MINECRAFT */
+        .mc-btn {
+            font-family: 'VT323', monospace;
+            font-size: 1.5rem;
+            background-color: #7c7c7c;
+            border: 4px solid;
+            border-color: #ddd #555 #555 #ddd;
+            color: #fff;
+            text-shadow: 2px 2px #000;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .mc-btn:hover {
+            background-color: #8c8c8c;
+            border-color: #fff #666 #666 #fff;
+        }
+
+        .mc-btn:active {
+            transform: scale(0.98);
+            border-color: #555 #ddd #ddd #555;
+        }
+
+        /* PANELES (VENTANAS) */
+        .mc-panel {
+            background-color: #c6c6c6;
+            border: 4px solid;
+            border-color: #fff #555 #555 #fff;
+            color: #2e2e2e;
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .mc-panel h2,
+        .mc-panel h3,
+        .mc-panel strong {
+            color: #111;
+            text-shadow: none;
+        }
+
+        .mc-panel p,
+        .mc-panel li {
+            color: #222;
+            font-weight: 500;
+        }
+
+        /* ITEMS / SLOTS */
+        .item-slot {
+            background-color: #8b8b8b;
+            border: 4px solid;
+            border-color: #373737 #fff #fff #373737;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* ESTILO PARA IMÁGENES MINECRAFT */
+        .mc-image-border {
+            border: 4px solid black;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            position: relative;
+            background-color: #000;
+        }
+
+        .mc-image-border img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mc-image-border:hover {
+            transform: scale(1.02);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-8">
+
+    <!-- PORTADA / TITLE SCREEN -->
+    <div class="max-w-5xl mx-auto mb-16 mt-8">
+        <div class="flex flex-col items-center justify-center text-center">
+
+            <div class="mb-8 animate-bounce">
+                <img src="https://moria.aurens.com/organizations/b922aba1-bec3-4ed6-85d1-300a5bbc9e6b/logos/5b250f-17.png"
+                    alt="Logo Castro Carazo" class="h-24 md:h-32 object-contain drop-shadow-[0_10px_0_rgba(0,0,0,0.5)]"
+                    onerror="this.onerror=null; this.parentElement.innerHTML='<h1 class=\'mc-font text-5xl text-yellow-400\'>CASTRO CARAZO</h1>'">
+            </div>
+
+            <h1 class="mc-font text-5xl md:text-7xl text-gray-200 mb-2"
+                style="text-shadow: 4px 4px 0 #3f3f3f, 6px 6px 0 #000;">
+                LEGISLACIÓN
+            </h1>
+            <h2 class="mc-font text-4xl md:text-6xl text-yellow-400 mb-8"
+                style="text-shadow: 4px 4px 0 #8b6d0c, 6px 6px 0 #000;">
+                EDUCATIVA
+            </h2>
+
+            <div class="bg-black/70 border-4 border-gray-500 p-6 max-w-2xl w-full backdrop-blur-sm shadow-2xl">
+                <p class="text-yellow-200 pixel-text text-center mb-4 text-2xl border-b-2 border-gray-600 pb-2">---
+                    SERVER INFO: LD5033 ---</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-lg">
+                    <div class="space-y-2">
+                        <p><span class="text-gray-400 pixel-text">Jugador:</span> <span
+                                class="text-white font-bold">Daniel Tijerino Cerón</span></p>
+                        <p><span class="text-gray-400 pixel-text">Rango:</span> <span
+                                class="text-green-400 font-bold">Licenciatura en Docencia</span></p>
+                        <p><span class="text-gray-400 pixel-text">Admin:</span> <span
+                                class="text-red-400 font-bold">Hilda María González Barahona</span></p>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="text-gray-400 pixel-text">Misión:</span> <span
+                                class="text-blue-400 font-bold">Portafolio #3</span></p>
+                        <p><span class="text-gray-400 pixel-text">Bioma:</span> <span class="text-white">Sede Central |
+                                I Cuatrimestre</span></p>
+                        <p><span class="text-gray-400 pixel-text">Spawn Date:</span> <span class="text-yellow-400">31 de
+                                enero de 2026</span></p>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex justify-center space-x-4">
+                    <button class="mc-btn w-full">PLAY SELECTED WORLD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT GRID -->
+    <main class="max-w-6xl mx-auto space-y-24">
+
+        <!-- QUEST 1: CRAFTING KNOWLEDGE (Qué aprendí) -->
+        <section class="relative">
+            <!-- Header Sección -->
+            <div class="flex items-center mb-6">
+                <div class="bg-green-600 p-2 border-4 border-black mr-4 text-white shadow-lg">
+                    <i class="fas fa-book-open text-2xl"></i>
+                </div>
+                <h2
+                    class="text-2xl md:text-3xl pixel-text text-white bg-black/60 px-4 py-2 border-2 border-gray-500 shadow-lg inline-block">
+                    QUEST 1: ¿QUÉ APRENDÍ?
+                </h2>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                <!-- Imagen Destacada Quest 1 (LIBROS / LEY) -->
+                <div class="w-full lg:w-1/3 min-h-[300px]">
+                    <div class="mc-image-border h-full relative group">
+                        <!-- IMAGEN ACTUALIZADA CON CONSTITUCIÓN DE COSTA RICA -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Constituci%C3%B3n_Pol%C3%ADtica_de_Costa_Rica_de_1971.jpg"
+                            alt="Constitución Política de Costa Rica">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-center text-yellow-400 pixel-text opacity-0 group-hover:opacity-100 transition">
+                            ITEM: MARCO LEGAL
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel de Inventario -->
+                <div class="mc-panel p-6 rounded-none w-full lg:w-2/3 flex flex-col justify-between">
+                    <div class="mb-6 bg-gray-200 p-4 border-inset border-2 border-gray-500 shadow-inner">
+                        <p class="text-lg text-gray-800">Se ha procesado la información referente a la estructura legal
+                            que sostiene el sistema educativo costarricense y su aplicación práctica en casos de
+                            necesidades educativas especiales.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Item 1 -->
+                        <div class="flex items-start space-x-4">
+                            <div class="item-slot shrink-0 bg-blue-900">
+                                <i class="fas fa-balance-scale text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 uppercase text-blue-900 pixel-text">Marco Legal</h3>
+                                <p class="leading-relaxed text-sm">Aprendí que la educación no es un servicio opcional,
+                                    sino un derecho y una obligación del Estado. No solo instruye, sino que forma
+                                    ciudadanos amantes de la patria.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex items-start space-x-4">
+                            <div class="item-slot shrink-0 bg-yellow-700">
+                                <i class="fas fa-layer-group text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 uppercase text-yellow-900 pixel-text">Estructura del
+                                    Sistema</h3>
+                                <p class="leading-relaxed text-sm">Organización escalonada: Preescolar, Primaria, Media
+                                    y Superior. La enseñanza primaria es obligatoria y gratuita.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex items-start space-x-4">
+                            <div class="item-slot shrink-0 bg-purple-800">
+                                <i class="fas fa-wheelchair text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 uppercase text-purple-900 pixel-text">Educación
+                                    Especial</h3>
+                                <p class="leading-relaxed text-sm">Análisis de la película "Black": La educación
+                                    especial es para personas con características distintas, buscando su incorporación
+                                    útil.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="flex items-start space-x-4">
+                            <div class="item-slot shrink-0 bg-red-800">
+                                <i class="fas fa-user-graduate text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 uppercase text-red-900 pixel-text">Formación Docente
+                                </h3>
+                                <p class="leading-relaxed text-sm">El docente debe formarse bajo principios democráticos
+                                    y constitucionales (Art. 77).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- QUEST 2: ACHIEVEMENTS (Cómo sé que lo aprendí) -->
+        <section class="relative">
+            <div class="flex items-center mb-6 justify-end">
+                <h2
+                    class="text-2xl md:text-3xl pixel-text text-yellow-400 bg-black/60 px-4 py-2 border-2 border-yellow-600 mr-4 shadow-lg text-right">
+                    QUEST 2: ¿CÓMO SÉ QUE LO APRENDÍ?
+                </h2>
+                <div class="bg-yellow-600 p-2 border-4 border-black text-white shadow-lg">
+                    <i class="fas fa-trophy text-2xl"></i>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse gap-8 items-stretch">
+                <!-- Imagen Destacada Quest 2 (LUZ / BLACK) -->
+                <div class="w-full lg:w-1/3 min-h-[300px]">
+                    <div class="mc-image-border h-full relative group">
+                        <img src="https://images.unsplash.com/photo-1494809610410-160faaed4de0?q=80&w=800&auto=format&fit=crop"
+                            alt="Luz en la oscuridad - Referencia Black">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-center text-yellow-400 pixel-text opacity-0 group-hover:opacity-100 transition">
+                            ACHIEVEMENT: LUZ EN LA OSCURIDAD
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full lg:w-2/3 bg-black/80 border-4 border-purple-500 p-6 shadow-2xl flex flex-col justify-center">
+                    <p
+                        class="text-xl text-purple-200 mb-8 italic text-center font-serif border-b border-purple-800 pb-4">
+                        "La verificación del aprendizaje se demuestra mediante la capacidad de correlacionar la teoría
+                        jurídica con situaciones fácticas."
+                    </p>
+
+                    <div class="space-y-4">
+                        <!-- Achievement 1 -->
+                        <div
+                            class="bg-gray-900 border-2 border-purple-400 p-5 flex flex-col md:flex-row items-center hover:bg-gray-800 transition rounded shadow-lg">
+                            <div
+                                class="w-16 h-16 shrink-0 mr-4 mb-4 md:mb-0 bg-emerald-500 border-4 border-white flex items-center justify-center shadow-lg">
+                                <i class="fas fa-check text-3xl text-white"></i>
+                            </div>
+                            <div class="w-full">
+                                <h3 class="text-yellow-400 text-2xl mb-2 pixel-text">LOGRO: Identificación de Conflictos
+                                </h3>
+                                <p class="text-gray-300">En la película "Black" identifico la ejecución del <strong
+                                        class="text-white">Artículo 27</strong>. Reconozco que la "oscuridad" se vence
+                                    con conocimientos adecuados.</p>
+                            </div>
+                        </div>
+
+                        <!-- Achievement 2 -->
+                        <div
+                            class="bg-gray-900 border-2 border-purple-400 p-5 flex flex-col md:flex-row items-center hover:bg-gray-800 transition rounded shadow-lg">
+                            <div
+                                class="w-16 h-16 shrink-0 mr-4 mb-4 md:mb-0 bg-blue-500 border-4 border-white flex items-center justify-center shadow-lg">
+                                <i class="fas fa-search text-3xl text-white"></i>
+                            </div>
+                            <div class="w-full">
+                                <h3 class="text-yellow-400 text-2xl mb-2 pixel-text">LOGRO: Clasificación de Normativas
+                                </h3>
+                                <p class="text-gray-300">Distingo la <strong class="text-white">autonomía
+                                        universitaria</strong> de la <strong class="text-white">educación
+                                        privada</strong>, sometida a inspección estatal (Art. 79).</p>
+                            </div>
+                        </div>
+
+                        <!-- Achievement 3 -->
+                        <div
+                            class="bg-gray-900 border-2 border-purple-400 p-5 flex flex-col md:flex-row items-center hover:bg-gray-800 transition rounded shadow-lg">
+                            <div
+                                class="w-16 h-16 shrink-0 mr-4 mb-4 md:mb-0 bg-red-500 border-4 border-white flex items-center justify-center shadow-lg">
+                                <i class="fas fa-heart text-3xl text-white"></i>
+                            </div>
+                            <div class="w-full">
+                                <h3 class="text-yellow-400 text-2xl mb-2 pixel-text">LOGRO: Análisis de Fines</h3>
+                                <p class="text-gray-300">Entiendo que el objetivo es "contribuir al desenvolvimiento de
+                                    la personalidad humana", un fin superior del <strong class="text-white">Artículo
+                                        2</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- QUEST 3: SURVIVAL MODE (Aplicación Real) -->
+        <section class="relative pb-16">
+            <div class="flex items-center mb-6">
+                <div class="bg-orange-600 p-2 border-4 border-black mr-4 text-white shadow-lg">
+                    <i class="fas fa-hammer text-2xl"></i>
+                </div>
+                <h2
+                    class="text-2xl md:text-3xl pixel-text text-white bg-black/60 px-4 py-2 border-2 border-gray-500 shadow-lg">
+                    QUEST 3: ¿CÓMO LO APLICO A MI REALIDAD?
+                </h2>
+            </div>
+
+            <div class="flex flex-col gap-6">
+
+                <!-- Panel Principal de Contenido -->
+                <div class="mc-panel p-6 bg-stone-200/90 backdrop-blur-sm relative z-10">
+                    <p
+                        class="text-xl mb-6 font-bold border-b-2 border-gray-500 pb-2 pixel-text text-gray-800 flex items-center justify-between">
+                        <span>Biome: Colegio Técnico Profesional (CTP) & Palmichal</span>
+                        <i class="fas fa-map-marker-alt text-red-600"></i>
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                        <!-- Bloque 1 -->
+                        <div
+                            class="bg-gray-300/90 border-4 border-gray-500 p-5 relative shadow-md hover:shadow-xl transition hover:scale-[1.02]">
+                            <div
+                                class="absolute -top-3 -right-3 bg-blue-600 text-white px-2 border-2 border-black text-sm pixel-text">
+                                CTP</div>
+                            <h3 class="text-xl font-bold mb-3 flex items-center text-blue-900 pixel-text"><i
+                                    class="fas fa-laptop-code mr-2"></i> Educación Técnica</h3>
+                            <p class="text-gray-800">Aplico el <strong>Artículo 17</strong>. En informática, mi labor es
+                                desarrollar habilidades que permitan al estudiante "orientarse hacia algún campo de
+                                actividades vocacionales".</p>
+                        </div>
+
+                        <!-- Bloque 2 -->
+                        <div
+                            class="bg-gray-300/90 border-4 border-gray-500 p-5 relative shadow-md hover:shadow-xl transition hover:scale-[1.02]">
+                            <div
+                                class="absolute -top-3 -right-3 bg-green-600 text-white px-2 border-2 border-black text-sm pixel-text">
+                                AULA</div>
+                            <h3 class="text-xl font-bold mb-3 flex items-center text-green-900 pixel-text"><i
+                                    class="fas fa-puzzle-piece mr-2"></i> Adaptación Curricular</h3>
+                            <p class="text-gray-800">Debo "atender adecuadamente las diferencias individuales". Si hay
+                                dificultades de aprendizaje, la ley me obliga a buscar métodos pedagógicos.</p>
+                        </div>
+
+                        <!-- Bloque 3 -->
+                        <div
+                            class="bg-gray-300/90 border-4 border-gray-500 p-5 relative shadow-md hover:shadow-xl transition hover:scale-[1.02]">
+                            <div
+                                class="absolute -top-3 -right-3 bg-red-600 text-white px-2 border-2 border-black text-sm pixel-text">
+                                LEY</div>
+                            <h3 class="text-xl font-bold mb-3 flex items-center text-red-900 pixel-text"><i
+                                    class="fas fa-gavel mr-2"></i> Ética y Democracia</h3>
+                            <p class="text-gray-800">Garantizar un ambiente democrático. Abstenerme de propaganda
+                                sectaria o política electoral (Prohibiciones <strong>Artículo 39</strong>).</p>
+                        </div>
+
+                        <!-- Bloque 4 -->
+                        <div
+                            class="bg-gray-300/90 border-4 border-gray-500 p-5 relative shadow-md hover:shadow-xl transition hover:scale-[1.02]">
+                            <div
+                                class="absolute -top-3 -right-3 bg-yellow-600 text-white px-2 border-2 border-black text-sm pixel-text">
+                                SOCIAL</div>
+                            <h3 class="text-xl font-bold mb-3 flex items-center text-yellow-900 pixel-text"><i
+                                    class="fas fa-users mr-2"></i> Proyección Social</h3>
+                            <p class="text-gray-800">En Palmichal (zona rural), la educación debe "elevar el nivel
+                                cultural, social y económico" de la comunidad, integrando técnica con necesidades
+                                locales.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Imagen Destacada Quest 3 (AULA INFORMÁTICA) -->
+                <!-- Movida al final para no ocultar el texto -->
+                <div class="w-full h-64 md:h-80">
+                    <div class="mc-image-border h-full relative group">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop"
+                            alt="Clase de Informática y Programación">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-center text-yellow-400 pixel-text opacity-0 group-hover:opacity-100 transition">
+                            LOCATION: LABORATORIO DE INFORMÁTICA
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER / INVENTORY BAR -->
+    <footer
+        class="fixed bottom-0 left-0 w-full bg-gray-800/95 border-t-4 border-gray-600 p-2 flex justify-center z-50 shadow-[0_-5px_10px_rgba(0,0,0,0.5)]">
+        <div class="flex space-x-2">
+            <!-- Barra de Inventario Visual -->
+            <div class="item-slot w-10 h-10 md:w-16 md:h-16 bg-gray-400 border-white"><i
+                    class="fas fa-book text-gray-700"></i></div>
+            <div class="item-slot w-10 h-10 md:w-16 md:h-16 bg-gray-400 border-gray-600"><i
+                    class="fas fa-scroll text-gray-700"></i></div>
+            <div class="item-slot w-10 h-10 md:w-16 md:h-16 bg-gray-400 border-gray-600"><i
+                    class="fas fa-gavel text-gray-700"></i></div>
+            <div class="item-slot w-10 h-10 md:w-16 md:h-16 bg-gray-400 border-gray-600"><i
+                    class="fas fa-keyboard text-gray-700"></i></div>
+            <div class="item-slot w-10 h-10 md:w-16 md:h-16 bg-gray-400 border-gray-600"><i
+                    class="fas fa-map-marked text-gray-700"></i></div>
+            <div class="item-slot w-10 h-10 md:w-16 md:h-16 bg-gray-400 border-gray-600 active border-yellow-400"><i
+                    class="fas fa-save text-yellow-600"></i></div>
+        </div>
+        <div class="absolute right-4 bottom-4 text-white text-xs hidden md:block pixel-text">
+            Version 3.0.0 <br> Daniel Tijerino
+        </div>
+    </footer>
+
+    <!-- Spacer para el footer fijo -->
+    <div class="h-24"></div>
+
+</body>
+
+</html>
